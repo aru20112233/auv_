@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AUV</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      transition: background-color 0.5s ease;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.25s ease-out;
+      background-color: black;
+    }
+    button:hover{
+      padding: 15px 40px;
+      font-size: 30px;
+      background-color: cyan;
+      transition: 1s ease-out;
+    }
+  </style>
+</head>
+<body>
+<button onclick="changeColor()">Tap for new color</button>
+<script>
+  function changeColor() {
+    // Generate a random color
+    const randomColor = '#' + Math.floor(Math.random()*(16777215)).toString(16); 
+    // 16777215 is value of FFFFFF hexadecimal and so it generates random hexadecimal code for colour
+    // Changing the background color of the body
+    document.body.style.backgroundColor = randomColor;
+  }
+</script>
+</body>
+</html>
